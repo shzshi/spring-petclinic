@@ -396,12 +396,14 @@
 			<plugin>
 				<groupId>org.apache.tomcat.maven</groupId>
 				<artifactId>tomcat7-maven-plugin</artifactId>
-				<version>2.0</version>
-				<configuration>
-					<server>tomcat-development-server</server>
-					<port>9966</port>
-					<path>/petclinic</path>
-				</configuration>
+				<version>2.1</version>
+                                <configuration>
+                                   <url>http://172.17.0.3:8080/manager/text</url>
+                                   <username>admin</username>
+                                   <password>s3cr3t</password>
+                                   <warFile>target/petclinic.war</warFile>
+                                   <path>/petclinic</path>
+                                </configuration>
 			</plugin>
 			 <plugin>
 		        <groupId>org.codehaus.mojo</groupId>
